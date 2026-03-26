@@ -23,6 +23,14 @@ SUBMIT_PARALLEL_REQUESTS = True if os.environ.get("SUBMIT_PARALLEL_REQUESTS", "f
 def _benchmark_payload():
     return {"sleep": 10}
 
+print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+print("MODEL_SERVER_PORT", MODEL_SERVER_PORT, "env: ", os.environ.get("MODEL_SERVER_PORT"))
+print("MAX_SESSIONS", MAX_SESSIONS, "env: ", os.environ.get("MAX_SESSIONS"))
+print("PROCESS_MAX_QUEUE_TIME", PROCESS_MAX_QUEUE_TIME, "env: ", os.environ.get("PROCESS_MAX_QUEUE_TIME"))
+print("PROCESS_PARALLEL_REQUESTS", PROCESS_PARALLEL_REQUESTS, "env: ", os.environ.get("PROCESS_PARALLEL_REQUESTS"))
+print("SUBMIT_MAX_QUEUE_TIME", SUBMIT_MAX_QUEUE_TIME, "env: ", os.environ.get("SUBMIT_MAX_QUEUE_TIME"))
+print("SUBMIT_PARALLEL_REQUESTS", SUBMIT_PARALLEL_REQUESTS, "env: ", os.environ.get("SUBMIT_PARALLEL_REQUESTS"))
+print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
 
 worker_config = WorkerConfig(
     model_server_url="http://127.0.0.1",
