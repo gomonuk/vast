@@ -14,7 +14,7 @@ import uuid
 from vastai import BenchmarkConfig, HandlerConfig, LogActionConfig, Worker, WorkerConfig
 
 MODEL_SERVER_PORT = int(os.environ.get("MODEL_SERVER_PORT", "18000"))
-MAX_SESSIONS = int(os.environ.get("MAX_SESSIONS", "10"))
+MAX_SESSIONS = int(os.environ.get("MAX_SESSIONS", "1"))
 PROCESS_MAX_QUEUE_TIME = float(os.environ.get("PROCESS_MAX_QUEUE_TIME", "300"))
 PROCESS_PARALLEL_REQUESTS = True if os.environ.get("PROCESS_PARALLEL_REQUESTS", "false") == "true" else False
 SUBMIT_MAX_QUEUE_TIME = float(os.environ.get("SUBMIT_MAX_QUEUE_TIME", "300"))
